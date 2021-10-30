@@ -2,6 +2,30 @@
 
 The Parts Unlimited backend is Node web app written with [Express](https://expressjs.com/)
 
+
+## Prerequisites 
+- You need to have [nodejs](https://nodejs.org/en/) version >= 15 installed. It is recommended to use [Node Version Manager](https://github.com/nvm-sh/nvm) if you need multiple nodejs versions installed locally.
+- Use the NPM bundled with node to install [yarn](https://yarnpkg.com/getting-started)
+- Install the application dependencies with `yarn install`
+
+### Database
+
+This application uses MongoDB. You can [install it directly](https://docs.mongodb.com/v5.0/installation/), or use [Docker](https://hub.docker.com/_/mongo). If you choose running via docker, spin up the instance using the `docker-compose.yml` file
+
+```
+docker-compose up -d
+```
+
+### Configuration
+
+Create a `.env` file in this folder, with the following configuration -
+
+```
+MONGODB_URI=mongodb://localhost:27017/
+```
+
+Change the URI according to the way you run your local MongoDB instance. 
+
 ## Getting started
 
 To start the app use: `yarn dev` from the backend directory.
